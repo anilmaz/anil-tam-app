@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anil-tam-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: anil-tam-app
+  template:
+    metadata:
+      labels:
+        app: anil-tam-app
+    spec:
+      containers:
+      - name: web
+        image: dbhitman/anil-tam-app:latest
+        ports:
+        - containerPort: 80

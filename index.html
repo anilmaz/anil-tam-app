@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ContainerCraft</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <main class="container">
+    <section class="hero card">
+      <h1>ContainerCraft</h1>
+      <p>Build, deploy, and scale with clarity. A gentle guide to Containers, Kubernetes, and Virtualization.</p>
+    </section>
+
+    <section class="features card">
+      <h2>Features</h2>
+      <ul>
+        <li>🧰 Hands-on container labs</li>
+        <li>☸️ Kubernetes dashboards and rituals</li>
+        <li>🧠 Virtualization walkthroughs</li>
+        <li>📘 Printable onboarding guides</li>
+      </ul>
+    </section>
+        <div class="glass-counter" id="visitCard">
+  <p id="visitText">Loading visit count...</p>
+</div>
+
+<script>
+  const visitCountKey = 'pageVisitCount';
+  let count = localStorage.getItem(visitCountKey);
+
+  if (count === null) {
+    count = 1;
+  } else {
+    count = parseInt(count) + 1;
+  }
+
+  localStorage.setItem(visitCountKey, count);
+
+  document.getElementById('visitText').innerText =
+    `You've accessed this page ${count} time${count > 1 ? 's' : ''} on this browser.`;
+</script>
+
+    <section class="about card">
+      <h2>About</h2>
+      <p>Created by Anil</p>
+    </section>
+
+    <footer class="footer card">
+      <p>Made with 💙 in Bengaluru | © 2025 ContainerCraft</p>
+    </footer>
+  </main>
+
+  
+</body>
+</html>
