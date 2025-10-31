@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: anil-tam-app
+  labels:
+    app: anil-tam-app
 spec:
   replicas: 2
   selector:
@@ -17,3 +19,8 @@ spec:
         image: dbhitman/anil-tam-app:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "250m"
